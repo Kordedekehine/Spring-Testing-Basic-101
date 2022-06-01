@@ -1,10 +1,19 @@
-package model;
+package Test.JustTest.model;
 
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "admins")
 public class Admin {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
     private String role;
+
     private String email;
     private int Salary;
 
